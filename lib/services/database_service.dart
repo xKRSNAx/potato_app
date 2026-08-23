@@ -20,7 +20,7 @@ class DatabaseService {
 
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
-    final path = join(dbPath, 'potato_varieties.db');
+    final path = join(dbPath, 'potato_varieties2.db');
 
     final dbFile = File(path);
     
@@ -49,7 +49,7 @@ class DatabaseService {
     
     // Копируем новую БД из assets
     debugPrint('📦 Копируем БД из assets...');
-    final assetData = await rootBundle.load('assets/potato_varieties.db');
+    final assetData = await rootBundle.load('assets/potato_varieties2.db');
     final buffer = assetData.buffer.asUint8List();
     await dbFile.writeAsBytes(buffer);
     debugPrint('✅ БД успешно скопирована!');
