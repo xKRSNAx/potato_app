@@ -1,4 +1,4 @@
-# potato_app
+# Potato_base_2026
 
 A new Flutter project.
 
